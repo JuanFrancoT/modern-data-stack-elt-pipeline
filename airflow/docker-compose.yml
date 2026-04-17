@@ -1,0 +1,53 @@
+version: "3.8"
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: airflow_postgres
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: airflow
+    volumes:
+      - postgres_db:/var/lib/postgresql/data
+
+  airflow:
+    build: .
+    container_name: airflow
+    depends_on:
+      - postgres
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ../elt_project:/opt/airflow/elt_project
+      - ../dbt_project:/opt/airflow/dbt_project
+      - ./logs:/opt/airflow/logs
+      - ../.env:/opt/airflow/.env
+      - ~/.dbt:/home/airflow/.dbt   # 👈 IMPORTANTE
+    ports:
+      - "8080:8080"
+    command: >
+      bash -c "
+      until airflow db check; do
+        echo 'Waiting for DB...';
+        sleep 5;
+      done;
+
+      airflow db migrate;
+
+      airflow users create \
+        --username admin \
+        --password admin \
+        --firstname admin \
+        --lastname admin \
+        --role Admin \
+        --email admin@email.com;
+
+      airflow webserver & airflow scheduler
+      "
+
+volumes:
+  postgres_db:

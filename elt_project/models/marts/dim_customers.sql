@@ -1,0 +1,7 @@
+{{ config(
+    materialized='table'
+) }}
+
+SELECT DISTINCT
+    customer_id
+FROM {{ ref('stg_orders') }}

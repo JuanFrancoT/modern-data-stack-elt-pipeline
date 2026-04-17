@@ -1,0 +1,200 @@
+[2026-04-15T14:44:26.502+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-04-15T14:44:26.533+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: elt_pipeline_snowflake.dbt_run scheduled__2026-04-14T00:00:00+00:00 [queued]>
+[2026-04-15T14:44:26.542+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: elt_pipeline_snowflake.dbt_run scheduled__2026-04-14T00:00:00+00:00 [queued]>
+[2026-04-15T14:44:26.547+0000] {taskinstance.py:2303} INFO - Starting attempt 2 of 2
+[2026-04-15T14:44:26.565+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): dbt_run> on 2026-04-14 00:00:00+00:00
+[2026-04-15T14:44:26.571+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'elt_pipeline_snowflake', 'dbt_run', 'scheduled__2026-04-14T00:00:00+00:00', '--job-id', '11', '--raw', '--subdir', 'DAGS_FOLDER/elt_pipeline.py', '--cfg-path', '/tmp/tmp8li51qb1']
+[2026-04-15T14:44:26.574+0000] {standard_task_runner.py:91} INFO - Job 11: Subtask dbt_run
+[2026-04-15T14:44:26.575+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=187) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-04-15T14:44:26.576+0000] {standard_task_runner.py:63} INFO - Started process 191 to run task
+[2026-04-15T14:44:26.638+0000] {task_command.py:426} INFO - Running <TaskInstance: elt_pipeline_snowflake.dbt_run scheduled__2026-04-14T00:00:00+00:00 [running]> on host 69fd46feb370
+[2026-04-15T14:44:26.735+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='juan' AIRFLOW_CTX_DAG_ID='elt_pipeline_snowflake' AIRFLOW_CTX_TASK_ID='dbt_run' AIRFLOW_CTX_EXECUTION_DATE='2026-04-14T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-04-14T00:00:00+00:00'
+[2026-04-15T14:44:26.736+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-04-15T14:44:26.761+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-04-15T14:44:26.762+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\n        set -a\n        source /opt/***/.env\n        set +a\n\n        cd /opt/***/dbt_project\n        dbt run\n        ']
+[2026-04-15T14:44:26.770+0000] {subprocess.py:86} INFO - Output:
+[2026-04-15T14:44:26.776+0000] {subprocess.py:93} INFO - /opt/***/.env: line 6: $'\r': command not found
+[2026-04-15T14:44:26.777+0000] {subprocess.py:93} INFO - /opt/***/.env: line 7: $'\r': command not found
+[2026-04-15T14:44:26.778+0000] {subprocess.py:93} INFO - /opt/***/.env: line 8: $'\r': command not found
+[2026-04-15T14:44:26.779+0000] {subprocess.py:93} INFO - /opt/***/.env: line 16: $'\r': command not found
+[2026-04-15T14:44:26.781+0000] {subprocess.py:93} INFO - /usr/bin/bash: line 7: dbt: command not found
+[2026-04-15T14:44:26.782+0000] {subprocess.py:97} INFO - Command exited with return code 127
+[2026-04-15T14:44:26.783+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-04-15T14:44:26.793+0000] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 127.
+[2026-04-15T14:44:26.800+0000] {taskinstance.py:1205} INFO - Marking task as FAILED. dag_id=elt_pipeline_snowflake, task_id=dbt_run, execution_date=20260414T000000, start_date=20260415T144426, end_date=20260415T144426
+[2026-04-15T14:44:26.817+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 11 for task dbt_run (Bash command failed. The command returned a non-zero exit code 127.; 191)
+[2026-04-15T14:44:26.831+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2026-04-15T14:44:26.854+0000] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-04-15T14:44:26.862+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2026-04-15T15:19:32.443+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-04-15T15:19:32.468+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: elt_pipeline_snowflake.dbt_run scheduled__2026-04-14T00:00:00+00:00 [queued]>
+[2026-04-15T15:19:32.477+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: elt_pipeline_snowflake.dbt_run scheduled__2026-04-14T00:00:00+00:00 [queued]>
+[2026-04-15T15:19:32.481+0000] {taskinstance.py:2303} INFO - Starting attempt 2 of 2
+[2026-04-15T15:19:32.527+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): dbt_run> on 2026-04-14 00:00:00+00:00
+[2026-04-15T15:19:32.534+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'elt_pipeline_snowflake', 'dbt_run', 'scheduled__2026-04-14T00:00:00+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/elt_pipeline.py', '--cfg-path', '/tmp/tmpa7nxohrv']
+[2026-04-15T15:19:32.536+0000] {standard_task_runner.py:91} INFO - Job 7: Subtask dbt_run
+[2026-04-15T15:19:32.536+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=319) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-04-15T15:19:32.537+0000] {standard_task_runner.py:63} INFO - Started process 320 to run task
+[2026-04-15T15:19:32.595+0000] {task_command.py:426} INFO - Running <TaskInstance: elt_pipeline_snowflake.dbt_run scheduled__2026-04-14T00:00:00+00:00 [running]> on host 060e4f29fd1f
+[2026-04-15T15:19:32.667+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='juan' AIRFLOW_CTX_DAG_ID='elt_pipeline_snowflake' AIRFLOW_CTX_TASK_ID='dbt_run' AIRFLOW_CTX_EXECUTION_DATE='2026-04-14T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-04-14T00:00:00+00:00'
+[2026-04-15T15:19:32.668+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-04-15T15:19:32.682+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-04-15T15:19:32.683+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\n        set -a\n        source /opt/***/.env\n        set +a\n\n        cd /opt/***/dbt_project\n        dbt run\n        ']
+[2026-04-15T15:19:32.691+0000] {subprocess.py:86} INFO - Output:
+[2026-04-15T15:19:32.696+0000] {subprocess.py:93} INFO - /usr/bin/bash: line 7: dbt: command not found
+[2026-04-15T15:19:32.696+0000] {subprocess.py:97} INFO - Command exited with return code 127
+[2026-04-15T15:19:32.697+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-04-15T15:19:32.708+0000] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 127.
+[2026-04-15T15:19:32.712+0000] {taskinstance.py:1205} INFO - Marking task as FAILED. dag_id=elt_pipeline_snowflake, task_id=dbt_run, execution_date=20260414T000000, start_date=20260415T151932, end_date=20260415T151932
+[2026-04-15T15:19:32.726+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 7 for task dbt_run (Bash command failed. The command returned a non-zero exit code 127.; 320)
+[2026-04-15T15:19:32.752+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2026-04-15T15:19:32.772+0000] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-04-15T15:19:32.778+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2026-04-15T15:47:43.067+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-04-15T15:47:43.105+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: elt_pipeline_snowflake.dbt_run scheduled__2026-04-14T00:00:00+00:00 [queued]>
+[2026-04-15T15:47:43.116+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: elt_pipeline_snowflake.dbt_run scheduled__2026-04-14T00:00:00+00:00 [queued]>
+[2026-04-15T15:47:43.116+0000] {taskinstance.py:2303} INFO - Starting attempt 2 of 2
+[2026-04-15T15:47:43.134+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): dbt_run> on 2026-04-14 00:00:00+00:00
+[2026-04-15T15:47:43.144+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'elt_pipeline_snowflake', 'dbt_run', 'scheduled__2026-04-14T00:00:00+00:00', '--job-id', '9', '--raw', '--subdir', 'DAGS_FOLDER/elt_pipeline.py', '--cfg-path', '/tmp/tmptvmbqjdm']
+[2026-04-15T15:47:43.150+0000] {standard_task_runner.py:91} INFO - Job 9: Subtask dbt_run
+[2026-04-15T15:47:43.155+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=474) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-04-15T15:47:43.155+0000] {standard_task_runner.py:63} INFO - Started process 477 to run task
+[2026-04-15T15:47:43.226+0000] {task_command.py:426} INFO - Running <TaskInstance: elt_pipeline_snowflake.dbt_run scheduled__2026-04-14T00:00:00+00:00 [running]> on host 93e181e324b5
+[2026-04-15T15:47:43.327+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='juan' AIRFLOW_CTX_DAG_ID='elt_pipeline_snowflake' AIRFLOW_CTX_TASK_ID='dbt_run' AIRFLOW_CTX_EXECUTION_DATE='2026-04-14T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-04-14T00:00:00+00:00'
+[2026-04-15T15:47:43.328+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-04-15T15:47:43.345+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-04-15T15:47:43.349+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\n        set -a\n        source /opt/***/.env\n        set +a\n\n        cd /opt/***/dbt_project\n        dbt run\n        ']
+[2026-04-15T15:47:43.359+0000] {subprocess.py:86} INFO - Output:
+[2026-04-15T15:47:45.142+0000] {subprocess.py:93} INFO - Usage: dbt run [OPTIONS]
+[2026-04-15T15:47:45.145+0000] {subprocess.py:93} INFO - Try 'dbt run -h' for help.
+[2026-04-15T15:47:45.145+0000] {subprocess.py:93} INFO - 
+[2026-04-15T15:47:45.146+0000] {subprocess.py:93} INFO - Error: Invalid value for '--profiles-dir': Path './dbt' does not exist.
+[2026-04-15T15:47:45.375+0000] {subprocess.py:97} INFO - Command exited with return code 2
+[2026-04-15T15:47:45.377+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-04-15T15:47:45.389+0000] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+[2026-04-15T15:47:45.395+0000] {taskinstance.py:1205} INFO - Marking task as FAILED. dag_id=elt_pipeline_snowflake, task_id=dbt_run, execution_date=20260414T000000, start_date=20260415T154743, end_date=20260415T154745
+[2026-04-15T15:47:45.501+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 9 for task dbt_run (Bash command failed. The command returned a non-zero exit code 2.; 477)
+[2026-04-15T15:47:45.545+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2026-04-15T15:47:45.570+0000] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-04-15T15:47:45.619+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2026-04-15T16:01:03.236+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-04-15T16:01:03.262+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: elt_pipeline_snowflake.dbt_run scheduled__2026-04-14T00:00:00+00:00 [queued]>
+[2026-04-15T16:01:03.268+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: elt_pipeline_snowflake.dbt_run scheduled__2026-04-14T00:00:00+00:00 [queued]>
+[2026-04-15T16:01:03.269+0000] {taskinstance.py:2303} INFO - Starting attempt 2 of 2
+[2026-04-15T16:01:03.281+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): dbt_run> on 2026-04-14 00:00:00+00:00
+[2026-04-15T16:01:03.287+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'elt_pipeline_snowflake', 'dbt_run', 'scheduled__2026-04-14T00:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/elt_pipeline.py', '--cfg-path', '/tmp/tmpqyt3_cf8']
+[2026-04-15T16:01:03.290+0000] {standard_task_runner.py:91} INFO - Job 6: Subtask dbt_run
+[2026-04-15T16:01:03.292+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=318) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-04-15T16:01:03.293+0000] {standard_task_runner.py:63} INFO - Started process 319 to run task
+[2026-04-15T16:01:03.344+0000] {task_command.py:426} INFO - Running <TaskInstance: elt_pipeline_snowflake.dbt_run scheduled__2026-04-14T00:00:00+00:00 [running]> on host 55b69667d8f5
+[2026-04-15T16:01:03.413+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='juan' AIRFLOW_CTX_DAG_ID='elt_pipeline_snowflake' AIRFLOW_CTX_TASK_ID='dbt_run' AIRFLOW_CTX_EXECUTION_DATE='2026-04-14T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-04-14T00:00:00+00:00'
+[2026-04-15T16:01:03.414+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-04-15T16:01:03.425+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-04-15T16:01:03.427+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\n        set -a\n        source /opt/***/.env\n        set +a\n\n        cd /opt/***/dbt_project\n        dbt run\n        ']
+[2026-04-15T16:01:03.433+0000] {subprocess.py:86} INFO - Output:
+[2026-04-15T16:01:05.149+0000] {subprocess.py:93} INFO - Usage: dbt run [OPTIONS]
+[2026-04-15T16:01:05.149+0000] {subprocess.py:93} INFO - Try 'dbt run -h' for help.
+[2026-04-15T16:01:05.150+0000] {subprocess.py:93} INFO - 
+[2026-04-15T16:01:05.151+0000] {subprocess.py:93} INFO - Error: Invalid value for '--profiles-dir': Path './dbt' does not exist.
+[2026-04-15T16:01:05.349+0000] {subprocess.py:97} INFO - Command exited with return code 2
+[2026-04-15T16:01:05.351+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-04-15T16:01:05.362+0000] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+[2026-04-15T16:01:05.366+0000] {taskinstance.py:1205} INFO - Marking task as FAILED. dag_id=elt_pipeline_snowflake, task_id=dbt_run, execution_date=20260414T000000, start_date=20260415T160103, end_date=20260415T160105
+[2026-04-15T16:01:05.379+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 6 for task dbt_run (Bash command failed. The command returned a non-zero exit code 2.; 319)
+[2026-04-15T16:01:05.393+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2026-04-15T16:01:05.411+0000] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-04-15T16:01:05.417+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2026-04-15T16:24:21.771+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-04-15T16:24:21.799+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: elt_pipeline_snowflake.dbt_run scheduled__2026-04-14T00:00:00+00:00 [queued]>
+[2026-04-15T16:24:21.806+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: elt_pipeline_snowflake.dbt_run scheduled__2026-04-14T00:00:00+00:00 [queued]>
+[2026-04-15T16:24:21.807+0000] {taskinstance.py:2303} INFO - Starting attempt 2 of 2
+[2026-04-15T16:24:21.823+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): dbt_run> on 2026-04-14 00:00:00+00:00
+[2026-04-15T16:24:21.829+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'elt_pipeline_snowflake', 'dbt_run', 'scheduled__2026-04-14T00:00:00+00:00', '--job-id', '15', '--raw', '--subdir', 'DAGS_FOLDER/elt_pipeline.py', '--cfg-path', '/tmp/tmp9c_8oy47']
+[2026-04-15T16:24:21.831+0000] {standard_task_runner.py:91} INFO - Job 15: Subtask dbt_run
+[2026-04-15T16:24:21.834+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=321) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-04-15T16:24:21.836+0000] {standard_task_runner.py:63} INFO - Started process 322 to run task
+[2026-04-15T16:24:21.882+0000] {task_command.py:426} INFO - Running <TaskInstance: elt_pipeline_snowflake.dbt_run scheduled__2026-04-14T00:00:00+00:00 [running]> on host 8abcf8b261db
+[2026-04-15T16:24:21.959+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='juan' AIRFLOW_CTX_DAG_ID='elt_pipeline_snowflake' AIRFLOW_CTX_TASK_ID='dbt_run' AIRFLOW_CTX_EXECUTION_DATE='2026-04-14T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-04-14T00:00:00+00:00'
+[2026-04-15T16:24:21.961+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-04-15T16:24:21.974+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-04-15T16:24:21.976+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\n        set -a\n        source /opt/***/.env\n        set +a\n\n        cd /opt/***/dbt_project\n        /home/***/.local/bin/dbt run --profiles-dir /opt/***/elt_project\n        ']
+[2026-04-15T16:24:21.983+0000] {subprocess.py:86} INFO - Output:
+[2026-04-15T16:24:23.948+0000] {subprocess.py:93} INFO - [0m16:24:23  Running with dbt=1.11.8
+[2026-04-15T16:24:23.952+0000] {subprocess.py:93} INFO - [0m16:24:23  Encountered an error:
+[2026-04-15T16:24:23.952+0000] {subprocess.py:93} INFO - Runtime Error
+[2026-04-15T16:24:23.953+0000] {subprocess.py:93} INFO -   No dbt_project.yml found at expected path /opt/***/dbt_project/dbt_project.yml
+[2026-04-15T16:24:23.953+0000] {subprocess.py:93} INFO -   Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+[2026-04-15T16:24:23.954+0000] {subprocess.py:93} INFO - 
+[2026-04-15T16:24:24.694+0000] {subprocess.py:97} INFO - Command exited with return code 2
+[2026-04-15T16:24:24.695+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-04-15T16:24:24.706+0000] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+[2026-04-15T16:24:24.710+0000] {taskinstance.py:1205} INFO - Marking task as FAILED. dag_id=elt_pipeline_snowflake, task_id=dbt_run, execution_date=20260414T000000, start_date=20260415T162421, end_date=20260415T162424
+[2026-04-15T16:24:24.726+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 15 for task dbt_run (Bash command failed. The command returned a non-zero exit code 2.; 322)
+[2026-04-15T16:24:24.742+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2026-04-15T16:24:24.762+0000] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-04-15T16:24:24.768+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

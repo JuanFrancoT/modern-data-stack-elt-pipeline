@@ -1,0 +1,53 @@
+[2026-04-16T03:34:59.843+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-04-16T03:34:59.881+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: elt_pipeline_snowflake.extract_load scheduled__2026-04-15T00:00:00+00:00 [queued]>
+[2026-04-16T03:34:59.890+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: elt_pipeline_snowflake.extract_load scheduled__2026-04-15T00:00:00+00:00 [queued]>
+[2026-04-16T03:34:59.894+0000] {taskinstance.py:2303} INFO - Starting attempt 5 of 6
+[2026-04-16T03:34:59.911+0000] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): extract_load> on 2026-04-15 00:00:00+00:00
+[2026-04-16T03:34:59.919+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'elt_pipeline_snowflake', 'extract_load', 'scheduled__2026-04-15T00:00:00+00:00', '--job-id', '40', '--raw', '--subdir', 'DAGS_FOLDER/elt_pipeline.py', '--cfg-path', '/tmp/tmpczajmoof']
+[2026-04-16T03:34:59.920+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=2811) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-04-16T03:34:59.923+0000] {standard_task_runner.py:91} INFO - Job 40: Subtask extract_load
+[2026-04-16T03:34:59.925+0000] {standard_task_runner.py:63} INFO - Started process 2815 to run task
+[2026-04-16T03:34:59.976+0000] {task_command.py:426} INFO - Running <TaskInstance: elt_pipeline_snowflake.extract_load scheduled__2026-04-15T00:00:00+00:00 [running]> on host 8abcf8b261db
+[2026-04-16T03:35:00.071+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='juan' AIRFLOW_CTX_DAG_ID='elt_pipeline_snowflake' AIRFLOW_CTX_TASK_ID='extract_load' AIRFLOW_CTX_EXECUTION_DATE='2026-04-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='5' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-04-15T00:00:00+00:00'
+[2026-04-16T03:35:00.073+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-04-16T03:35:00.090+0000] {connection.py:620} INFO - Snowflake Connector for Python Version: 4.4.0, Python Version: 3.12.2, Platform: Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.36
+[2026-04-16T03:35:00.091+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-04-16T03:35:00.092+0000] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/elt_pipeline.py", line 24, in load_to_snowflake
+    conn = snowflake.connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/snowflake/connector/__init__.py", line 64, in Connect
+    return SnowflakeConnection(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/snowflake/connector/connection.py", line 688, in __init__
+    self.connect(**kwargs)
+  File "/home/airflow/.local/lib/python3.12/site-packages/snowflake/connector/connection.py", line 1122, in connect
+    self.__config(**kwargs)
+  File "/home/airflow/.local/lib/python3.12/site-packages/snowflake/connector/connection.py", line 1714, in __config
+    self._host = construct_hostname(kwargs.get("region"), self._account)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/snowflake/connector/util_text.py", line 252, in construct_hostname
+    if account.find(".") > 0 and _is_china_region(account.split(".")[1]):
+       ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'find'
+[2026-04-16T03:35:00.113+0000] {taskinstance.py:1205} INFO - Marking task as UP_FOR_RETRY. dag_id=elt_pipeline_snowflake, task_id=extract_load, execution_date=20260415T000000, start_date=20260416T033459, end_date=20260416T033500
+[2026-04-16T03:35:00.126+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 40 for task extract_load ('NoneType' object has no attribute 'find'; 2815)
+[2026-04-16T03:35:00.141+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2026-04-16T03:35:00.160+0000] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-04-16T03:35:00.165+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

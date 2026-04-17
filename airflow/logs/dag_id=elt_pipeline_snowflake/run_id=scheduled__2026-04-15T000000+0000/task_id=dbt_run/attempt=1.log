@@ -1,0 +1,233 @@
+[2026-04-16T03:10:32.695+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-04-16T03:10:32.727+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: elt_pipeline_snowflake.dbt_run scheduled__2026-04-15T00:00:00+00:00 [queued]>
+[2026-04-16T03:10:32.736+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: elt_pipeline_snowflake.dbt_run scheduled__2026-04-15T00:00:00+00:00 [queued]>
+[2026-04-16T03:10:32.743+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2026-04-16T03:10:32.763+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): dbt_run> on 2026-04-15 00:00:00+00:00
+[2026-04-16T03:10:32.771+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'elt_pipeline_snowflake', 'dbt_run', 'scheduled__2026-04-15T00:00:00+00:00', '--job-id', '35', '--raw', '--subdir', 'DAGS_FOLDER/elt_pipeline.py', '--cfg-path', '/tmp/tmpotdm1krx']
+[2026-04-16T03:10:32.773+0000] {standard_task_runner.py:91} INFO - Job 35: Subtask dbt_run
+[2026-04-16T03:10:32.774+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=2465) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-04-16T03:10:32.775+0000] {standard_task_runner.py:63} INFO - Started process 2466 to run task
+[2026-04-16T03:10:32.823+0000] {task_command.py:426} INFO - Running <TaskInstance: elt_pipeline_snowflake.dbt_run scheduled__2026-04-15T00:00:00+00:00 [running]> on host 8abcf8b261db
+[2026-04-16T03:10:32.911+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='juan' AIRFLOW_CTX_DAG_ID='elt_pipeline_snowflake' AIRFLOW_CTX_TASK_ID='dbt_run' AIRFLOW_CTX_EXECUTION_DATE='2026-04-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-04-15T00:00:00+00:00'
+[2026-04-16T03:10:32.911+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-04-16T03:10:32.926+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-04-16T03:10:32.927+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\n        set -a\n        source /opt/***/.env\n        set +a\n\n        cd /opt/***/elt_project\n        /home/***/.local/bin/dbt run --profiles-dir /opt/***/elt_project\n        ']
+[2026-04-16T03:10:32.935+0000] {subprocess.py:86} INFO - Output:
+[2026-04-16T03:10:36.257+0000] {subprocess.py:93} INFO - [0m03:10:36  Running with dbt=1.11.8
+[2026-04-16T03:10:37.799+0000] {subprocess.py:93} INFO - [0m03:10:37  Registered adapter: snowflake=1.11.4
+[2026-04-16T03:10:38.558+0000] {subprocess.py:93} INFO - [0m03:10:38  [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+[2026-04-16T03:10:38.559+0000] {subprocess.py:93} INFO - There are 2 unused configuration paths:
+[2026-04-16T03:10:38.560+0000] {subprocess.py:93} INFO - - models.elt_project.intermediate
+[2026-04-16T03:10:38.560+0000] {subprocess.py:93} INFO - - models.elt_project.marts
+[2026-04-16T03:10:38.936+0000] {subprocess.py:93} INFO - [0m03:10:38  Found 4 models, 12 data tests, 1 source, 523 macros
+[2026-04-16T03:10:38.942+0000] {subprocess.py:93} INFO - [0m03:10:38
+[2026-04-16T03:10:38.945+0000] {subprocess.py:93} INFO - [0m03:10:38  Concurrency: 4 threads (target='dev')
+[2026-04-16T03:10:38.946+0000] {subprocess.py:93} INFO - [0m03:10:38
+[2026-04-16T03:11:12.257+0000] {subprocess.py:93} INFO - [0m03:11:12
+[2026-04-16T03:11:12.260+0000] {subprocess.py:93} INFO - [0m03:11:12  Finished running  in 0 hours 0 minutes and 33.31 seconds (33.31s).
+[2026-04-16T03:11:12.262+0000] {subprocess.py:93} INFO - [0m03:11:12  Encountered an error:
+[2026-04-16T03:11:12.263+0000] {subprocess.py:93} INFO - Runtime Error
+[2026-04-16T03:11:12.264+0000] {subprocess.py:93} INFO -   Database error while listing schemas in database "ELT_DB"
+[2026-04-16T03:11:12.264+0000] {subprocess.py:93} INFO -   Database Error
+[2026-04-16T03:11:12.265+0000] {subprocess.py:93} INFO -     250001: Could not connect to Snowflake backend after 2 attempt(s).Aborting
+[2026-04-16T03:11:20.719+0000] {subprocess.py:97} INFO - Command exited with return code 2
+[2026-04-16T03:11:20.721+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-04-16T03:11:20.731+0000] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+[2026-04-16T03:11:20.740+0000] {taskinstance.py:1205} INFO - Marking task as UP_FOR_RETRY. dag_id=elt_pipeline_snowflake, task_id=dbt_run, execution_date=20260415T000000, start_date=20260416T031032, end_date=20260416T031120
+[2026-04-16T03:11:20.754+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 35 for task dbt_run (Bash command failed. The command returned a non-zero exit code 2.; 2466)
+[2026-04-16T03:11:20.794+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2026-04-16T03:11:20.812+0000] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-04-16T03:11:20.816+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2026-04-16T03:59:09.886+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-04-16T03:59:09.911+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: elt_pipeline_snowflake.dbt_run scheduled__2026-04-15T00:00:00+00:00 [queued]>
+[2026-04-16T03:59:09.920+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: elt_pipeline_snowflake.dbt_run scheduled__2026-04-15T00:00:00+00:00 [queued]>
+[2026-04-16T03:59:09.921+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2026-04-16T03:59:09.934+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): dbt_run> on 2026-04-15 00:00:00+00:00
+[2026-04-16T03:59:09.941+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=3358) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-04-16T03:59:09.943+0000] {standard_task_runner.py:63} INFO - Started process 3362 to run task
+[2026-04-16T03:59:09.941+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'elt_pipeline_snowflake', 'dbt_run', 'scheduled__2026-04-15T00:00:00+00:00', '--job-id', '47', '--raw', '--subdir', 'DAGS_FOLDER/elt_pipeline.py', '--cfg-path', '/tmp/tmp30bibdp0']
+[2026-04-16T03:59:09.944+0000] {standard_task_runner.py:91} INFO - Job 47: Subtask dbt_run
+[2026-04-16T03:59:09.987+0000] {task_command.py:426} INFO - Running <TaskInstance: elt_pipeline_snowflake.dbt_run scheduled__2026-04-15T00:00:00+00:00 [running]> on host 8abcf8b261db
+[2026-04-16T03:59:10.053+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='juan' AIRFLOW_CTX_DAG_ID='elt_pipeline_snowflake' AIRFLOW_CTX_TASK_ID='dbt_run' AIRFLOW_CTX_EXECUTION_DATE='2026-04-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-04-15T00:00:00+00:00'
+[2026-04-16T03:59:10.054+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-04-16T03:59:10.064+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-04-16T03:59:10.065+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\n        set -a\n        source /opt/***/.env\n        set +a\n\n        cd /opt/***/elt_project\n        /home/***/.local/bin/dbt run --profiles-dir /opt/***/elt_project\n        ']
+[2026-04-16T03:59:10.074+0000] {subprocess.py:86} INFO - Output:
+[2026-04-16T03:59:12.007+0000] {subprocess.py:93} INFO - [0m03:59:12  Running with dbt=1.11.8
+[2026-04-16T03:59:12.861+0000] {subprocess.py:93} INFO - [0m03:59:12  Registered adapter: snowflake=1.11.4
+[2026-04-16T03:59:13.392+0000] {subprocess.py:93} INFO - [0m03:59:13  [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+[2026-04-16T03:59:13.393+0000] {subprocess.py:93} INFO - There are 2 unused configuration paths:
+[2026-04-16T03:59:13.393+0000] {subprocess.py:93} INFO - - models.elt_project.intermediate
+[2026-04-16T03:59:13.394+0000] {subprocess.py:93} INFO - - models.elt_project.marts
+[2026-04-16T03:59:13.616+0000] {subprocess.py:93} INFO - [0m03:59:13  Found 4 models, 12 data tests, 1 source, 523 macros
+[2026-04-16T03:59:13.622+0000] {subprocess.py:93} INFO - [0m03:59:13
+[2026-04-16T03:59:13.624+0000] {subprocess.py:93} INFO - [0m03:59:13  Concurrency: 4 threads (target='dev')
+[2026-04-16T03:59:13.626+0000] {subprocess.py:93} INFO - [0m03:59:13
+[2026-04-16T03:59:15.928+0000] {subprocess.py:93} INFO - [0m03:59:15  1 of 4 START sql incremental model staging.stg_orders .......................... [RUN]
+[2026-04-16T03:59:17.901+0000] {subprocess.py:93} INFO - [0m03:59:17  1 of 4 OK created sql incremental model staging.stg_orders ..................... [[32mSUCCESS 0[0m in 1.97s]
+[2026-04-16T03:59:17.908+0000] {subprocess.py:93} INFO - [0m03:59:17  2 of 4 START sql view model staging.dim_customers .............................. [RUN]
+[2026-04-16T03:59:17.909+0000] {subprocess.py:93} INFO - [0m03:59:17  3 of 4 START sql view model staging.fact_orders ................................ [RUN]
+[2026-04-16T03:59:17.910+0000] {subprocess.py:93} INFO - [0m03:59:17  4 of 4 START sql view model staging.orders_summary ............................. [RUN]
+[2026-04-16T03:59:19.737+0000] {subprocess.py:93} INFO - [0m03:59:19  2 of 4 OK created sql view model staging.dim_customers ......................... [[32mSUCCESS 1[0m in 1.82s]
+[2026-04-16T03:59:19.748+0000] {subprocess.py:93} INFO - [0m03:59:19  4 of 4 OK created sql view model staging.orders_summary ........................ [[32mSUCCESS 1[0m in 1.83s]
+[2026-04-16T03:59:19.799+0000] {subprocess.py:93} INFO - [0m03:59:19  3 of 4 OK created sql view model staging.fact_orders ........................... [[32mSUCCESS 1[0m in 1.88s]
+[2026-04-16T03:59:20.874+0000] {subprocess.py:93} INFO - [0m03:59:20
+[2026-04-16T03:59:20.876+0000] {subprocess.py:93} INFO - [0m03:59:20  Finished running 1 incremental model, 3 view models in 0 hours 0 minutes and 7.25 seconds (7.25s).
+[2026-04-16T03:59:21.012+0000] {subprocess.py:93} INFO - [0m03:59:21
+[2026-04-16T03:59:21.013+0000] {subprocess.py:93} INFO - [0m03:59:21  [32mCompleted successfully[0m
+[2026-04-16T03:59:21.017+0000] {subprocess.py:93} INFO - [0m03:59:21
+[2026-04-16T03:59:21.018+0000] {subprocess.py:93} INFO - [0m03:59:21  Done. PASS=4 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=4
+[2026-04-16T03:59:22.043+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-04-16T03:59:22.044+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-04-16T03:59:22.066+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=elt_pipeline_snowflake, task_id=dbt_run, execution_date=20260415T000000, start_date=20260416T035909, end_date=20260416T035922
+[2026-04-16T03:59:22.080+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-04-16T03:59:22.095+0000] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-04-16T03:59:22.098+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2026-04-16T04:06:57.424+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-04-16T04:06:57.446+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: elt_pipeline_snowflake.dbt_run scheduled__2026-04-15T00:00:00+00:00 [queued]>
+[2026-04-16T04:06:57.453+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: elt_pipeline_snowflake.dbt_run scheduled__2026-04-15T00:00:00+00:00 [queued]>
+[2026-04-16T04:06:57.454+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2026-04-16T04:06:57.469+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): dbt_run> on 2026-04-15 00:00:00+00:00
+[2026-04-16T04:06:57.477+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=3592) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-04-16T04:06:57.476+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'elt_pipeline_snowflake', 'dbt_run', 'scheduled__2026-04-15T00:00:00+00:00', '--job-id', '51', '--raw', '--subdir', 'DAGS_FOLDER/elt_pipeline.py', '--cfg-path', '/tmp/tmpesiqu5if']
+[2026-04-16T04:06:57.478+0000] {standard_task_runner.py:63} INFO - Started process 3596 to run task
+[2026-04-16T04:06:57.479+0000] {standard_task_runner.py:91} INFO - Job 51: Subtask dbt_run
+[2026-04-16T04:06:57.531+0000] {task_command.py:426} INFO - Running <TaskInstance: elt_pipeline_snowflake.dbt_run scheduled__2026-04-15T00:00:00+00:00 [running]> on host 8abcf8b261db
+[2026-04-16T04:06:57.610+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='juan' AIRFLOW_CTX_DAG_ID='elt_pipeline_snowflake' AIRFLOW_CTX_TASK_ID='dbt_run' AIRFLOW_CTX_EXECUTION_DATE='2026-04-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-04-15T00:00:00+00:00'
+[2026-04-16T04:06:57.611+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-04-16T04:06:57.623+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-04-16T04:06:57.625+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\n        set -a\n        source /opt/***/.env\n        set +a\n\n        cd /opt/***/elt_project\n        /home/***/.local/bin/dbt run --profiles-dir /opt/***/elt_project\n        ']
+[2026-04-16T04:06:57.634+0000] {subprocess.py:86} INFO - Output:
+[2026-04-16T04:06:59.585+0000] {subprocess.py:93} INFO - [0m04:06:59  Running with dbt=1.11.8
+[2026-04-16T04:07:00.465+0000] {subprocess.py:93} INFO - [0m04:07:00  Registered adapter: snowflake=1.11.4
+[2026-04-16T04:07:00.837+0000] {subprocess.py:93} INFO - [0m04:07:00  [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+[2026-04-16T04:07:00.837+0000] {subprocess.py:93} INFO - There are 2 unused configuration paths:
+[2026-04-16T04:07:00.838+0000] {subprocess.py:93} INFO - - models.elt_project.marts
+[2026-04-16T04:07:00.838+0000] {subprocess.py:93} INFO - - models.elt_project.intermediate
+[2026-04-16T04:07:01.080+0000] {subprocess.py:93} INFO - [0m04:07:01  Found 4 models, 12 data tests, 1 source, 523 macros
+[2026-04-16T04:07:01.086+0000] {subprocess.py:93} INFO - [0m04:07:01
+[2026-04-16T04:07:01.088+0000] {subprocess.py:93} INFO - [0m04:07:01  Concurrency: 4 threads (target='dev')
+[2026-04-16T04:07:01.090+0000] {subprocess.py:93} INFO - [0m04:07:01
+[2026-04-16T04:07:03.134+0000] {subprocess.py:93} INFO - [0m04:07:03  1 of 4 START sql incremental model staging.stg_orders .......................... [RUN]
+[2026-04-16T04:07:05.069+0000] {subprocess.py:93} INFO - [0m04:07:05  1 of 4 OK created sql incremental model staging.stg_orders ..................... [[32mSUCCESS 0[0m in 1.93s]
+[2026-04-16T04:07:05.077+0000] {subprocess.py:93} INFO - [0m04:07:05  2 of 4 START sql view model staging.dim_customers .............................. [RUN]
+[2026-04-16T04:07:05.079+0000] {subprocess.py:93} INFO - [0m04:07:05  3 of 4 START sql view model staging.fact_orders ................................ [RUN]
+[2026-04-16T04:07:05.080+0000] {subprocess.py:93} INFO - [0m04:07:05  4 of 4 START sql view model staging.orders_summary ............................. [RUN]
+[2026-04-16T04:07:06.710+0000] {subprocess.py:93} INFO - [0m04:07:06  2 of 4 OK created sql view model staging.dim_customers ......................... [[32mSUCCESS 1[0m in 1.63s]
+[2026-04-16T04:07:06.877+0000] {subprocess.py:93} INFO - [0m04:07:06  3 of 4 OK created sql view model staging.fact_orders ........................... [[32mSUCCESS 1[0m in 1.79s]
+[2026-04-16T04:07:07.218+0000] {subprocess.py:93} INFO - [0m04:07:07  4 of 4 OK created sql view model staging.orders_summary ........................ [[32mSUCCESS 1[0m in 2.13s]
+[2026-04-16T04:07:08.224+0000] {subprocess.py:93} INFO - [0m04:07:08
+[2026-04-16T04:07:08.229+0000] {subprocess.py:93} INFO - [0m04:07:08  Finished running 1 incremental model, 3 view models in 0 hours 0 minutes and 7.13 seconds (7.13s).
+[2026-04-16T04:07:08.320+0000] {subprocess.py:93} INFO - [0m04:07:08
+[2026-04-16T04:07:08.331+0000] {subprocess.py:93} INFO - [0m04:07:08  [32mCompleted successfully[0m
+[2026-04-16T04:07:08.334+0000] {subprocess.py:93} INFO - [0m04:07:08
+[2026-04-16T04:07:08.339+0000] {subprocess.py:93} INFO - [0m04:07:08  Done. PASS=4 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=4
+[2026-04-16T04:07:09.390+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-04-16T04:07:09.391+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-04-16T04:07:09.414+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=elt_pipeline_snowflake, task_id=dbt_run, execution_date=20260415T000000, start_date=20260416T040657, end_date=20260416T040709
+[2026-04-16T04:07:09.435+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-04-16T04:07:09.455+0000] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-04-16T04:07:09.461+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2026-04-16T04:26:33.483+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-04-16T04:26:33.504+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: elt_pipeline_snowflake.dbt_run scheduled__2026-04-15T00:00:00+00:00 [queued]>
+[2026-04-16T04:26:33.510+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: elt_pipeline_snowflake.dbt_run scheduled__2026-04-15T00:00:00+00:00 [queued]>
+[2026-04-16T04:26:33.510+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2026-04-16T04:26:33.521+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): dbt_run> on 2026-04-15 00:00:00+00:00
+[2026-04-16T04:26:33.528+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=3994) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-04-16T04:26:33.529+0000] {standard_task_runner.py:63} INFO - Started process 3998 to run task
+[2026-04-16T04:26:33.528+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'elt_pipeline_snowflake', 'dbt_run', 'scheduled__2026-04-15T00:00:00+00:00', '--job-id', '56', '--raw', '--subdir', 'DAGS_FOLDER/elt_pipeline.py', '--cfg-path', '/tmp/tmp5hcgde27']
+[2026-04-16T04:26:33.530+0000] {standard_task_runner.py:91} INFO - Job 56: Subtask dbt_run
+[2026-04-16T04:26:33.573+0000] {task_command.py:426} INFO - Running <TaskInstance: elt_pipeline_snowflake.dbt_run scheduled__2026-04-15T00:00:00+00:00 [running]> on host 8abcf8b261db
+[2026-04-16T04:26:33.639+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='juan' AIRFLOW_CTX_DAG_ID='elt_pipeline_snowflake' AIRFLOW_CTX_TASK_ID='dbt_run' AIRFLOW_CTX_EXECUTION_DATE='2026-04-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-04-15T00:00:00+00:00'
+[2026-04-16T04:26:33.641+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-04-16T04:26:33.659+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-04-16T04:26:33.660+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\n        set -a\n        source /opt/***/.env\n        set +a\n\n        cd /opt/***/elt_project\n        /home/***/.local/bin/dbt run --profiles-dir /opt/***/elt_project\n        ']
+[2026-04-16T04:26:33.673+0000] {subprocess.py:86} INFO - Output:
+[2026-04-16T04:26:35.559+0000] {subprocess.py:93} INFO - [0m04:26:35  Running with dbt=1.11.8
+[2026-04-16T04:26:36.441+0000] {subprocess.py:93} INFO - [0m04:26:36  Registered adapter: snowflake=1.11.4
+[2026-04-16T04:26:36.955+0000] {subprocess.py:93} INFO - [0m04:26:36  [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+[2026-04-16T04:26:36.956+0000] {subprocess.py:93} INFO - There are 2 unused configuration paths:
+[2026-04-16T04:26:36.956+0000] {subprocess.py:93} INFO - - models.elt_project.intermediate
+[2026-04-16T04:26:36.957+0000] {subprocess.py:93} INFO - - models.elt_project.marts
+[2026-04-16T04:26:37.178+0000] {subprocess.py:93} INFO - [0m04:26:37  Found 4 models, 12 data tests, 1 source, 523 macros
+[2026-04-16T04:26:37.188+0000] {subprocess.py:93} INFO - [0m04:26:37
+[2026-04-16T04:26:37.190+0000] {subprocess.py:93} INFO - [0m04:26:37  Concurrency: 4 threads (target='dev')
+[2026-04-16T04:26:37.192+0000] {subprocess.py:93} INFO - [0m04:26:37
+[2026-04-16T04:26:39.157+0000] {subprocess.py:93} INFO - [0m04:26:39  1 of 4 START sql incremental model staging.stg_orders .......................... [RUN]
+[2026-04-16T04:26:41.566+0000] {subprocess.py:93} INFO - [0m04:26:41  1 of 4 OK created sql incremental model staging.stg_orders ..................... [[32mSUCCESS 0[0m in 2.40s]
+[2026-04-16T04:26:41.573+0000] {subprocess.py:93} INFO - [0m04:26:41  2 of 4 START sql view model staging.dim_customers .............................. [RUN]
+[2026-04-16T04:26:41.575+0000] {subprocess.py:93} INFO - [0m04:26:41  3 of 4 START sql view model staging.fact_orders ................................ [RUN]
+[2026-04-16T04:26:41.576+0000] {subprocess.py:93} INFO - [0m04:26:41  4 of 4 START sql view model staging.orders_summary ............................. [RUN]
+[2026-04-16T04:26:42.754+0000] {subprocess.py:93} INFO - [0m04:26:42  4 of 4 OK created sql view model staging.orders_summary ........................ [[32mSUCCESS 1[0m in 1.17s]
+[2026-04-16T04:26:43.703+0000] {subprocess.py:93} INFO - [0m04:26:43  3 of 4 OK created sql view model staging.fact_orders ........................... [[32mSUCCESS 1[0m in 2.12s]
+[2026-04-16T04:26:43.858+0000] {subprocess.py:93} INFO - [0m04:26:43  2 of 4 OK created sql view model staging.dim_customers ......................... [[32mSUCCESS 1[0m in 2.28s]
+[2026-04-16T04:26:44.873+0000] {subprocess.py:93} INFO - [0m04:26:44
+[2026-04-16T04:26:44.875+0000] {subprocess.py:93} INFO - [0m04:26:44  Finished running 1 incremental model, 3 view models in 0 hours 0 minutes and 7.68 seconds (7.68s).
+[2026-04-16T04:26:44.949+0000] {subprocess.py:93} INFO - [0m04:26:44
+[2026-04-16T04:26:44.962+0000] {subprocess.py:93} INFO - [0m04:26:44  [32mCompleted successfully[0m
+[2026-04-16T04:26:44.964+0000] {subprocess.py:93} INFO - [0m04:26:44
+[2026-04-16T04:26:44.966+0000] {subprocess.py:93} INFO - [0m04:26:44  Done. PASS=4 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=4
+[2026-04-16T04:26:45.820+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-04-16T04:26:45.821+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-04-16T04:26:45.844+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=elt_pipeline_snowflake, task_id=dbt_run, execution_date=20260415T000000, start_date=20260416T042633, end_date=20260416T042645
+[2026-04-16T04:26:45.866+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-04-16T04:26:45.882+0000] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-04-16T04:26:45.888+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2026-04-16T04:27:32.934+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-04-16T04:27:32.955+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: elt_pipeline_snowflake.dbt_run scheduled__2026-04-15T00:00:00+00:00 [queued]>
+[2026-04-16T04:27:32.962+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: elt_pipeline_snowflake.dbt_run scheduled__2026-04-15T00:00:00+00:00 [queued]>
+[2026-04-16T04:27:32.967+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2026-04-16T04:27:32.983+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): dbt_run> on 2026-04-15 00:00:00+00:00
+[2026-04-16T04:27:32.989+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=4152) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-04-16T04:27:32.989+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'elt_pipeline_snowflake', 'dbt_run', 'scheduled__2026-04-15T00:00:00+00:00', '--job-id', '60', '--raw', '--subdir', 'DAGS_FOLDER/elt_pipeline.py', '--cfg-path', '/tmp/tmpjqqfrj2o']
+[2026-04-16T04:27:32.991+0000] {standard_task_runner.py:63} INFO - Started process 4156 to run task
+[2026-04-16T04:27:32.992+0000] {standard_task_runner.py:91} INFO - Job 60: Subtask dbt_run
+[2026-04-16T04:27:33.038+0000] {task_command.py:426} INFO - Running <TaskInstance: elt_pipeline_snowflake.dbt_run scheduled__2026-04-15T00:00:00+00:00 [running]> on host 8abcf8b261db
+[2026-04-16T04:27:33.108+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='juan' AIRFLOW_CTX_DAG_ID='elt_pipeline_snowflake' AIRFLOW_CTX_TASK_ID='dbt_run' AIRFLOW_CTX_EXECUTION_DATE='2026-04-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-04-15T00:00:00+00:00'
+[2026-04-16T04:27:33.109+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-04-16T04:27:33.120+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-04-16T04:27:33.124+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\n        set -a\n        source /opt/***/.env\n        set +a\n\n        cd /opt/***/elt_project\n        /home/***/.local/bin/dbt run --profiles-dir /opt/***/elt_project\n        ']
+[2026-04-16T04:27:33.132+0000] {subprocess.py:86} INFO - Output:
+[2026-04-16T04:27:34.871+0000] {subprocess.py:93} INFO - [0m04:27:34  Running with dbt=1.11.8
+[2026-04-16T04:27:35.668+0000] {subprocess.py:93} INFO - [0m04:27:35  Registered adapter: snowflake=1.11.4
+[2026-04-16T04:27:36.074+0000] {subprocess.py:93} INFO - [0m04:27:36  [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+[2026-04-16T04:27:36.075+0000] {subprocess.py:93} INFO - There are 2 unused configuration paths:
+[2026-04-16T04:27:36.075+0000] {subprocess.py:93} INFO - - models.elt_project.intermediate
+[2026-04-16T04:27:36.075+0000] {subprocess.py:93} INFO - - models.elt_project.marts
+[2026-04-16T04:27:36.302+0000] {subprocess.py:93} INFO - [0m04:27:36  Found 4 models, 12 data tests, 1 source, 523 macros
+[2026-04-16T04:27:36.309+0000] {subprocess.py:93} INFO - [0m04:27:36
+[2026-04-16T04:27:36.318+0000] {subprocess.py:93} INFO - [0m04:27:36  Concurrency: 4 threads (target='dev')
+[2026-04-16T04:27:36.331+0000] {subprocess.py:93} INFO - [0m04:27:36
+[2026-04-16T04:27:38.398+0000] {subprocess.py:93} INFO - [0m04:27:38  1 of 4 START sql incremental model staging.stg_orders .......................... [RUN]
+[2026-04-16T04:27:40.712+0000] {subprocess.py:93} INFO - [0m04:27:40  1 of 4 OK created sql incremental model staging.stg_orders ..................... [[32mSUCCESS 0[0m in 2.31s]
+[2026-04-16T04:27:40.720+0000] {subprocess.py:93} INFO - [0m04:27:40  2 of 4 START sql view model staging.dim_customers .............................. [RUN]
+[2026-04-16T04:27:40.721+0000] {subprocess.py:93} INFO - [0m04:27:40  3 of 4 START sql view model staging.fact_orders ................................ [RUN]
+[2026-04-16T04:27:40.723+0000] {subprocess.py:93} INFO - [0m04:27:40  4 of 4 START sql view model staging.orders_summary ............................. [RUN]
+[2026-04-16T04:27:42.327+0000] {subprocess.py:93} INFO - [0m04:27:42  4 of 4 OK created sql view model staging.orders_summary ........................ [[32mSUCCESS 1[0m in 1.60s]
+[2026-04-16T04:27:42.337+0000] {subprocess.py:93} INFO - [0m04:27:42  2 of 4 OK created sql view model staging.dim_customers ......................... [[32mSUCCESS 1[0m in 1.61s]
+[2026-04-16T04:27:42.368+0000] {subprocess.py:93} INFO - [0m04:27:42  3 of 4 OK created sql view model staging.fact_orders ........................... [[32mSUCCESS 1[0m in 1.64s]
+[2026-04-16T04:27:43.343+0000] {subprocess.py:93} INFO - [0m04:27:43
+[2026-04-16T04:27:43.349+0000] {subprocess.py:93} INFO - [0m04:27:43  Finished running 1 incremental model, 3 view models in 0 hours 0 minutes and 7.01 seconds (7.01s).
+[2026-04-16T04:27:43.502+0000] {subprocess.py:93} INFO - [0m04:27:43
+[2026-04-16T04:27:43.505+0000] {subprocess.py:93} INFO - [0m04:27:43  [32mCompleted successfully[0m
+[2026-04-16T04:27:43.507+0000] {subprocess.py:93} INFO - [0m04:27:43
+[2026-04-16T04:27:43.510+0000] {subprocess.py:93} INFO - [0m04:27:43  Done. PASS=4 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=4
+[2026-04-16T04:27:44.491+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-04-16T04:27:44.492+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-04-16T04:27:44.518+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=elt_pipeline_snowflake, task_id=dbt_run, execution_date=20260415T000000, start_date=20260416T042732, end_date=20260416T042744
+[2026-04-16T04:27:44.572+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-04-16T04:27:44.588+0000] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-04-16T04:27:44.595+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

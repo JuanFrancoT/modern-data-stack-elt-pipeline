@@ -1,0 +1,7 @@
+boto3
+python-dotenv
+pandas
+snowflake-connector-python
+apache-airflow
+dbt-core
+dbt-snowflake

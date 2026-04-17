@@ -1,0 +1,53 @@
+[2026-04-16T03:16:21.852+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-04-16T03:16:21.915+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: elt_pipeline_snowflake.dbt_run scheduled__2026-04-15T00:00:00+00:00 [queued]>
+[2026-04-16T03:16:21.927+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: elt_pipeline_snowflake.dbt_run scheduled__2026-04-15T00:00:00+00:00 [queued]>
+[2026-04-16T03:16:21.929+0000] {taskinstance.py:2303} INFO - Starting attempt 2 of 2
+[2026-04-16T03:16:21.950+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): dbt_run> on 2026-04-15 00:00:00+00:00
+[2026-04-16T03:16:21.958+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'elt_pipeline_snowflake', 'dbt_run', 'scheduled__2026-04-15T00:00:00+00:00', '--job-id', '36', '--raw', '--subdir', 'DAGS_FOLDER/elt_pipeline.py', '--cfg-path', '/tmp/tmpvuobieq_']
+[2026-04-16T03:16:21.960+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=2544) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-04-16T03:16:21.961+0000] {standard_task_runner.py:91} INFO - Job 36: Subtask dbt_run
+[2026-04-16T03:16:21.962+0000] {standard_task_runner.py:63} INFO - Started process 2545 to run task
+[2026-04-16T03:16:22.019+0000] {task_command.py:426} INFO - Running <TaskInstance: elt_pipeline_snowflake.dbt_run scheduled__2026-04-15T00:00:00+00:00 [running]> on host 8abcf8b261db
+[2026-04-16T03:16:22.090+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='juan' AIRFLOW_CTX_DAG_ID='elt_pipeline_snowflake' AIRFLOW_CTX_TASK_ID='dbt_run' AIRFLOW_CTX_EXECUTION_DATE='2026-04-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-04-15T00:00:00+00:00'
+[2026-04-16T03:16:22.097+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-04-16T03:16:22.119+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-04-16T03:16:22.127+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\n        set -a\n        source /opt/***/.env\n        set +a\n\n        cd /opt/***/elt_project\n        /home/***/.local/bin/dbt run --profiles-dir /opt/***/elt_project\n        ']
+[2026-04-16T03:16:22.138+0000] {subprocess.py:86} INFO - Output:
+[2026-04-16T03:16:24.578+0000] {subprocess.py:93} INFO - [0m03:16:24  Running with dbt=1.11.8
+[2026-04-16T03:16:25.770+0000] {subprocess.py:93} INFO - [0m03:16:25  Registered adapter: snowflake=1.11.4
+[2026-04-16T03:16:26.138+0000] {subprocess.py:93} INFO - [0m03:16:26  [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+[2026-04-16T03:16:26.139+0000] {subprocess.py:93} INFO - There are 2 unused configuration paths:
+[2026-04-16T03:16:26.139+0000] {subprocess.py:93} INFO - - models.elt_project.marts
+[2026-04-16T03:16:26.140+0000] {subprocess.py:93} INFO - - models.elt_project.intermediate
+[2026-04-16T03:16:26.351+0000] {subprocess.py:93} INFO - [0m03:16:26  Found 4 models, 12 data tests, 1 source, 523 macros
+[2026-04-16T03:16:26.359+0000] {subprocess.py:93} INFO - [0m03:16:26
+[2026-04-16T03:16:26.363+0000] {subprocess.py:93} INFO - [0m03:16:26  Concurrency: 4 threads (target='dev')
+[2026-04-16T03:16:26.365+0000] {subprocess.py:93} INFO - [0m03:16:26
+[2026-04-16T03:16:59.540+0000] {subprocess.py:93} INFO - [0m03:16:59
+[2026-04-16T03:16:59.541+0000] {subprocess.py:93} INFO - [0m03:16:59  Finished running  in 0 hours 0 minutes and 33.17 seconds (33.17s).
+[2026-04-16T03:16:59.544+0000] {subprocess.py:93} INFO - [0m03:16:59  Encountered an error:
+[2026-04-16T03:16:59.545+0000] {subprocess.py:93} INFO - Runtime Error
+[2026-04-16T03:16:59.545+0000] {subprocess.py:93} INFO -   Database error while listing schemas in database "ELT_DB"
+[2026-04-16T03:16:59.546+0000] {subprocess.py:93} INFO -   Database Error
+[2026-04-16T03:16:59.546+0000] {subprocess.py:93} INFO -     250001: Could not connect to Snowflake backend after 2 attempt(s).Aborting
+[2026-04-16T03:17:07.942+0000] {subprocess.py:97} INFO - Command exited with return code 2
+[2026-04-16T03:17:07.943+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-04-16T03:17:07.952+0000] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+[2026-04-16T03:17:07.957+0000] {taskinstance.py:1205} INFO - Marking task as FAILED. dag_id=elt_pipeline_snowflake, task_id=dbt_run, execution_date=20260415T000000, start_date=20260416T031621, end_date=20260416T031707
+[2026-04-16T03:17:07.969+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 36 for task dbt_run (Bash command failed. The command returned a non-zero exit code 2.; 2545)
+[2026-04-16T03:17:07.994+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2026-04-16T03:17:08.012+0000] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-04-16T03:17:08.020+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

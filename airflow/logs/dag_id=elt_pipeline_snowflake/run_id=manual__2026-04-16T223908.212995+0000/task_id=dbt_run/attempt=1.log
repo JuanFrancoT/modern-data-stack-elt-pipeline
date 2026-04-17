@@ -1,0 +1,88 @@
+[2026-04-16T22:39:18.980+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-04-16T22:39:19.005+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: elt_pipeline_snowflake.dbt_run manual__2026-04-16T22:39:08.212995+00:00 [queued]>
+[2026-04-16T22:39:19.014+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: elt_pipeline_snowflake.dbt_run manual__2026-04-16T22:39:08.212995+00:00 [queued]>
+[2026-04-16T22:39:19.015+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2026-04-16T22:39:19.032+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): dbt_run> on 2026-04-16 22:39:08.212995+00:00
+[2026-04-16T22:39:19.042+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'elt_pipeline_snowflake', 'dbt_run', 'manual__2026-04-16T22:39:08.212995+00:00', '--job-id', '70', '--raw', '--subdir', 'DAGS_FOLDER/elt_pipeline.py', '--cfg-path', '/tmp/tmp4ugdgk_p']
+[2026-04-16T22:39:19.044+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=2295) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-04-16T22:39:19.045+0000] {standard_task_runner.py:91} INFO - Job 70: Subtask dbt_run
+[2026-04-16T22:39:19.046+0000] {standard_task_runner.py:63} INFO - Started process 2299 to run task
+[2026-04-16T22:39:19.095+0000] {task_command.py:426} INFO - Running <TaskInstance: elt_pipeline_snowflake.dbt_run manual__2026-04-16T22:39:08.212995+00:00 [running]> on host 8abcf8b261db
+[2026-04-16T22:39:19.232+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='juan' AIRFLOW_CTX_DAG_ID='elt_pipeline_snowflake' AIRFLOW_CTX_TASK_ID='dbt_run' AIRFLOW_CTX_EXECUTION_DATE='2026-04-16T22:39:08.212995+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-04-16T22:39:08.212995+00:00'
+[2026-04-16T22:39:19.234+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-04-16T22:39:19.246+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-04-16T22:39:19.249+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\n        set -a\n        source /opt/***/.env\n        set +a\n\n        cd /opt/***/elt_project\n        /home/***/.local/bin/dbt run --profiles-dir /opt/***/elt_project\n        ']
+[2026-04-16T22:39:19.260+0000] {subprocess.py:86} INFO - Output:
+[2026-04-16T22:39:22.280+0000] {subprocess.py:93} INFO - [0m22:39:22  Running with dbt=1.11.8
+[2026-04-16T22:39:23.516+0000] {subprocess.py:93} INFO - [0m22:39:23  Registered adapter: snowflake=1.11.4
+[2026-04-16T22:39:23.889+0000] {subprocess.py:93} INFO - [0m22:39:23  [[33mWARNING[0m][PropertyMovedToConfigDeprecation]: Deprecated functionality
+[2026-04-16T22:39:23.890+0000] {subprocess.py:93} INFO - Found `freshness` as a top-level property of `sources[0].tables[0]` in file
+[2026-04-16T22:39:23.890+0000] {subprocess.py:93} INFO - `models/staging/sources.yml`. The `freshness` top-level property should be moved
+[2026-04-16T22:39:23.891+0000] {subprocess.py:93} INFO - into the `config` of `sources[0].tables[0]`.
+[2026-04-16T22:39:24.462+0000] {subprocess.py:93} INFO - [0m22:39:24  Encountered an error:
+[2026-04-16T22:39:24.462+0000] {subprocess.py:93} INFO - 'elt_project://macros/generate_schema_name.sql'
+[2026-04-16T22:39:24.464+0000] {subprocess.py:93} INFO - [0m22:39:24  Traceback (most recent call last):
+[2026-04-16T22:39:24.465+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/dbt/cli/requires.py", line 182, in wrapper
+[2026-04-16T22:39:24.466+0000] {subprocess.py:93} INFO -     result, success = func(*args, **kwargs)
+[2026-04-16T22:39:24.466+0000] {subprocess.py:93} INFO -                       ^^^^^^^^^^^^^^^^^^^^^
+[2026-04-16T22:39:24.467+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/dbt/cli/requires.py", line 128, in wrapper
+[2026-04-16T22:39:24.467+0000] {subprocess.py:93} INFO -     return func(*args, **kwargs)
+[2026-04-16T22:39:24.468+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^
+[2026-04-16T22:39:24.468+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/dbt/cli/requires.py", line 276, in wrapper
+[2026-04-16T22:39:24.469+0000] {subprocess.py:93} INFO -     return func(*args, **kwargs)
+[2026-04-16T22:39:24.470+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^
+[2026-04-16T22:39:24.470+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/dbt/cli/requires.py", line 321, in wrapper
+[2026-04-16T22:39:24.471+0000] {subprocess.py:93} INFO -     return func(*args, **kwargs)
+[2026-04-16T22:39:24.471+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^
+[2026-04-16T22:39:24.472+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/dbt/cli/requires.py", line 391, in wrapper
+[2026-04-16T22:39:24.472+0000] {subprocess.py:93} INFO -     return func(*args, **kwargs)
+[2026-04-16T22:39:24.473+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^
+[2026-04-16T22:39:24.473+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/dbt/cli/requires.py", line 368, in wrapper
+[2026-04-16T22:39:24.474+0000] {subprocess.py:93} INFO -     return func(*args, **kwargs)
+[2026-04-16T22:39:24.474+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^
+[2026-04-16T22:39:24.475+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/dbt/cli/requires.py", line 407, in wrapper
+[2026-04-16T22:39:24.475+0000] {subprocess.py:93} INFO -     setup_manifest(ctx, write=write, write_perf_info=write_perf_info)
+[2026-04-16T22:39:24.476+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/dbt/cli/requires.py", line 434, in setup_manifest
+[2026-04-16T22:39:24.476+0000] {subprocess.py:93} INFO -     ctx.obj["manifest"] = parse_manifest(
+[2026-04-16T22:39:24.477+0000] {subprocess.py:93} INFO -                           ^^^^^^^^^^^^^^^
+[2026-04-16T22:39:24.477+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/dbt/parser/manifest.py", line 2257, in parse_manifest
+[2026-04-16T22:39:24.478+0000] {subprocess.py:93} INFO -     manifest = ManifestLoader.get_full_manifest(
+[2026-04-16T22:39:24.478+0000] {subprocess.py:93} INFO -                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-04-16T22:39:24.479+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/dbt/parser/manifest.py", line 323, in get_full_manifest
+[2026-04-16T22:39:24.479+0000] {subprocess.py:93} INFO -     manifest = loader.load()
+[2026-04-16T22:39:24.480+0000] {subprocess.py:93} INFO -                ^^^^^^^^^^^^^
+[2026-04-16T22:39:24.480+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/dbt/parser/manifest.py", line 392, in load
+[2026-04-16T22:39:24.481+0000] {subprocess.py:93} INFO -     self.load_and_parse_macros(project_parser_files)
+[2026-04-16T22:39:24.482+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/dbt/parser/manifest.py", line 707, in load_and_parse_macros
+[2026-04-16T22:39:24.482+0000] {subprocess.py:93} INFO -     block = FileBlock(self.manifest.files[file_id])
+[2026-04-16T22:39:24.483+0000] {subprocess.py:93} INFO -                       ~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+[2026-04-16T22:39:24.483+0000] {subprocess.py:93} INFO - KeyError: 'elt_project://macros/generate_schema_name.sql'
+[2026-04-16T22:39:24.484+0000] {subprocess.py:93} INFO - 
+[2026-04-16T22:39:24.484+0000] {subprocess.py:93} INFO - [0m22:39:24  [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+[2026-04-16T22:39:24.485+0000] {subprocess.py:93} INFO - Summary of encountered deprecations:
+[2026-04-16T22:39:24.486+0000] {subprocess.py:93} INFO - - PropertyMovedToConfigDeprecation: 2 occurrences
+[2026-04-16T22:39:24.486+0000] {subprocess.py:93} INFO - To see all deprecation instances instead of just the first occurrence of each,
+[2026-04-16T22:39:24.487+0000] {subprocess.py:93} INFO - run command again with the `--show-all-deprecations` flag. You may also need to
+[2026-04-16T22:39:24.487+0000] {subprocess.py:93} INFO - run with `--no-partial-parse` as some deprecations are only encountered during
+[2026-04-16T22:39:24.488+0000] {subprocess.py:93} INFO - parsing.
+[2026-04-16T22:39:25.507+0000] {subprocess.py:97} INFO - Command exited with return code 2
+[2026-04-16T22:39:25.508+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-04-16T22:39:25.517+0000] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+[2026-04-16T22:39:25.521+0000] {taskinstance.py:1205} INFO - Marking task as UP_FOR_RETRY. dag_id=elt_pipeline_snowflake, task_id=dbt_run, execution_date=20260416T223908, start_date=20260416T223919, end_date=20260416T223925
+[2026-04-16T22:39:25.538+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 70 for task dbt_run (Bash command failed. The command returned a non-zero exit code 2.; 2299)
+[2026-04-16T22:39:25.576+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2026-04-16T22:39:25.593+0000] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-04-16T22:39:25.596+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

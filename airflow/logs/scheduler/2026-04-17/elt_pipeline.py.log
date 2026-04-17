@@ -1,0 +1,507 @@
+[2026-04-17T03:11:28.372+0000] {processor.py:161} INFO - Started process (PID=2542) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:11:28.386+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:11:28.407+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:11:28.405+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:11:30.217+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:11:30.270+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:11:30.269+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:11:30.352+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:11:30.352+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:30:02.025+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 2.112 seconds
+[2026-04-17T03:30:02.443+0000] {processor.py:161} INFO - Started process (PID=2564) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:30:02.446+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:30:02.449+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:30:02.449+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:30:03.796+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:30:03.831+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:30:03.831+0000] {taskinstance.py:2892} ERROR - {'DAG Id': 'elt_pipeline_snowflake', 'Task Id': 'extract_load', 'Run Id': 'scheduled__2026-04-16T00:00:00+00:00', 'Hostname': '8abcf8b261db'}
+[2026-04-17T03:30:03.858+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:30:03.858+0000] {taskinstance.py:1205} INFO - Marking task as UP_FOR_RETRY. dag_id=elt_pipeline_snowflake, task_id=extract_load, execution_date=20260416T000000, start_date=20260417T031129, end_date=20260417T033003
+[2026-04-17T03:30:03.869+0000] {processor.py:791} INFO - Executed failure callback for <TaskInstance: elt_pipeline_snowflake.extract_load scheduled__2026-04-16T00:00:00+00:00 [up_for_retry]> in state up_for_retry
+[2026-04-17T03:30:04.040+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:30:04.040+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:30:04.060+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:30:04.059+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:30:04.088+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 1.651 seconds
+[2026-04-17T03:30:34.374+0000] {processor.py:161} INFO - Started process (PID=2576) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:30:34.376+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:30:34.377+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:30:34.376+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:30:34.904+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:30:34.923+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:30:34.923+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:30:34.940+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:30:34.940+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:30:34.964+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.596 seconds
+[2026-04-17T03:31:05.279+0000] {processor.py:161} INFO - Started process (PID=2584) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:31:05.281+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:31:05.282+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:31:05.282+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:31:05.821+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:31:05.841+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:31:05.841+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:31:05.857+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:31:05.857+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:31:05.892+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.618 seconds
+[2026-04-17T03:31:35.995+0000] {processor.py:161} INFO - Started process (PID=2592) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:31:35.996+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:31:35.997+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:31:35.997+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:31:36.623+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:31:36.647+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:31:36.647+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:31:36.669+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:31:36.669+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:31:36.695+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.705 seconds
+[2026-04-17T03:32:06.816+0000] {processor.py:161} INFO - Started process (PID=2600) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:32:06.817+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:32:06.819+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:32:06.818+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:32:07.378+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:32:07.399+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:32:07.399+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:32:07.418+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:32:07.418+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:32:07.443+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.632 seconds
+[2026-04-17T03:32:38.442+0000] {processor.py:161} INFO - Started process (PID=2608) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:32:38.443+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:32:38.444+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:32:38.444+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:32:39.042+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:32:39.066+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:32:39.066+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:32:39.084+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:32:39.084+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:32:39.108+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.672 seconds
+[2026-04-17T03:33:09.293+0000] {processor.py:161} INFO - Started process (PID=2616) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:33:09.294+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:33:09.295+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:33:09.295+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:33:09.799+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:33:09.820+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:33:09.819+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:33:09.836+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:33:09.836+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:33:09.894+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.605 seconds
+[2026-04-17T03:33:40.084+0000] {processor.py:161} INFO - Started process (PID=2624) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:33:40.085+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:33:40.086+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:33:40.085+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:33:40.176+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:33:40.196+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:33:40.196+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:33:40.211+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:33:40.211+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:33:40.230+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.571 seconds
+[2026-04-17T03:34:10.418+0000] {processor.py:161} INFO - Started process (PID=2632) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:34:10.420+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:34:10.421+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:34:10.421+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:34:10.963+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:34:10.982+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:34:10.981+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:34:10.997+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:34:10.997+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:34:11.019+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.606 seconds
+[2026-04-17T03:34:41.331+0000] {processor.py:161} INFO - Started process (PID=2640) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:34:41.332+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:34:41.333+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:34:41.333+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:34:41.861+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:34:41.879+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:34:41.879+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:34:41.896+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:34:41.896+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:34:41.912+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.587 seconds
+[2026-04-17T03:35:12.535+0000] {processor.py:161} INFO - Started process (PID=2648) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:35:12.537+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:35:12.538+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:35:12.538+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:35:13.093+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:35:13.114+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:35:13.114+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:35:13.132+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:35:13.132+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:35:13.152+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.622 seconds
+[2026-04-17T03:35:44.084+0000] {processor.py:161} INFO - Started process (PID=2656) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:35:44.085+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:35:44.086+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:35:44.086+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:35:44.597+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:35:44.618+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:35:44.618+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:35:44.633+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:35:44.633+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:35:44.659+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.580 seconds
+[2026-04-17T03:36:15.039+0000] {processor.py:161} INFO - Started process (PID=2664) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:36:15.040+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:36:15.041+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:36:15.040+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:36:15.538+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:36:15.558+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:36:15.558+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:36:15.574+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:36:15.574+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:36:15.593+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.559 seconds
+[2026-04-17T03:36:46.529+0000] {processor.py:161} INFO - Started process (PID=2672) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:36:46.529+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:36:46.530+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:36:46.530+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:36:47.046+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:36:47.065+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:36:47.065+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:36:47.083+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:36:47.083+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:36:47.102+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.578 seconds
+[2026-04-17T03:37:17.627+0000] {processor.py:161} INFO - Started process (PID=2680) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:37:17.628+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:37:17.629+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:37:17.628+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:37:18.176+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:37:18.196+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:37:18.196+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:37:18.214+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:37:18.214+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:37:18.235+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.613 seconds
+[2026-04-17T03:37:48.298+0000] {processor.py:161} INFO - Started process (PID=2688) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:37:48.299+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:37:48.300+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:37:48.299+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:37:48.813+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:37:48.835+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:37:48.835+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:37:48.853+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:37:48.853+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:37:48.876+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.585 seconds
+[2026-04-17T03:38:19.272+0000] {processor.py:161} INFO - Started process (PID=2696) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:38:19.273+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:38:19.274+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:38:19.274+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:38:19.810+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:38:19.831+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:38:19.830+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:38:19.848+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:38:19.848+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:38:19.868+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.600 seconds
+[2026-04-17T03:38:50.383+0000] {processor.py:161} INFO - Started process (PID=2704) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:38:50.385+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:38:50.386+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:38:50.385+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:38:50.918+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:38:50.940+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:38:50.940+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:38:50.957+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:38:50.956+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:38:50.975+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.600 seconds
+[2026-04-17T03:39:21.443+0000] {processor.py:161} INFO - Started process (PID=2712) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:39:21.444+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:39:21.445+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:39:21.444+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:39:21.966+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:39:21.987+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:39:21.987+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:39:22.004+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:39:22.003+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:39:22.027+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.590 seconds
+[2026-04-17T03:39:52.150+0000] {processor.py:161} INFO - Started process (PID=2720) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:39:52.151+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:39:52.152+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:39:52.152+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:39:52.679+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:39:52.700+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:39:52.699+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:39:52.717+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:39:52.717+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:39:52.740+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.595 seconds
+[2026-04-17T03:40:23.147+0000] {processor.py:161} INFO - Started process (PID=2728) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:40:23.148+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:40:23.149+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:40:23.149+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:40:23.678+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:40:23.698+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:40:23.698+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:40:23.717+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:40:23.716+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:40:23.739+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.596 seconds
+[2026-04-17T03:40:54.087+0000] {processor.py:161} INFO - Started process (PID=2736) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:40:54.089+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:40:54.091+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:40:54.090+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:40:54.924+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:40:54.948+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:40:54.948+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:40:54.966+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:40:54.965+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:40:54.982+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.903 seconds
+[2026-04-17T03:41:25.258+0000] {processor.py:161} INFO - Started process (PID=2744) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:41:25.259+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:41:25.260+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:41:25.260+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:41:25.761+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:41:25.784+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:41:25.784+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:41:25.801+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:41:25.801+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:41:25.822+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.569 seconds
+[2026-04-17T03:41:56.262+0000] {processor.py:161} INFO - Started process (PID=2752) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:41:56.263+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:41:56.264+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:41:56.263+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:41:55.926+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:41:55.951+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:41:55.951+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:41:55.968+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:41:55.968+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:41:55.985+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.839 seconds
+[2026-04-17T03:42:26.426+0000] {processor.py:161} INFO - Started process (PID=2760) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:42:26.427+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:42:26.428+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:42:26.428+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:42:26.929+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:42:26.947+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:42:26.947+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:42:26.967+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:42:26.966+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:42:26.986+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.564 seconds
+[2026-04-17T03:42:57.625+0000] {processor.py:161} INFO - Started process (PID=2768) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:42:57.626+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:42:57.628+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:42:57.628+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:42:58.569+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:42:58.607+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:42:58.607+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:42:58.626+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:42:58.626+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:42:58.649+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 1.035 seconds
+[2026-04-17T03:43:29.007+0000] {processor.py:161} INFO - Started process (PID=2776) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:43:29.008+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:43:29.009+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:43:29.009+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:43:29.524+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:43:29.543+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:43:29.542+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:43:29.560+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:43:29.559+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:43:29.580+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.578 seconds
+[2026-04-17T03:43:59.939+0000] {processor.py:161} INFO - Started process (PID=2784) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:43:59.940+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:43:59.941+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:43:59.941+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:44:00.798+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:44:00.825+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:44:00.825+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:44:00.846+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:44:00.845+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:44:00.867+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.935 seconds
+[2026-04-17T03:44:31.389+0000] {processor.py:161} INFO - Started process (PID=2792) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:44:31.390+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:44:31.391+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:44:31.391+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:44:31.896+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:44:31.919+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:44:31.919+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:44:31.936+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:44:31.936+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:44:31.960+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.575 seconds
+[2026-04-17T03:45:02.276+0000] {processor.py:161} INFO - Started process (PID=2800) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:45:02.278+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:45:02.279+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:45:02.278+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:45:03.152+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:45:03.181+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:45:03.181+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:45:03.201+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:45:03.201+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:45:03.220+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.950 seconds
+[2026-04-17T03:45:33.654+0000] {processor.py:161} INFO - Started process (PID=2808) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:45:33.656+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:45:33.658+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:45:33.657+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:45:34.201+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:45:34.222+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:45:34.222+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:45:34.240+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:45:34.240+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:45:34.263+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.614 seconds
+[2026-04-17T03:46:04.554+0000] {processor.py:161} INFO - Started process (PID=2816) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:46:04.555+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:46:04.557+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:46:04.557+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:46:05.437+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:46:05.462+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:46:05.462+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:46:05.479+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:46:05.479+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:46:05.498+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.955 seconds
+[2026-04-17T03:46:35.856+0000] {processor.py:161} INFO - Started process (PID=2824) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:46:35.857+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:46:35.858+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:46:35.858+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:46:36.370+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:46:36.390+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:46:36.390+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:46:36.407+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:46:36.407+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:46:36.427+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.575 seconds
+[2026-04-17T03:47:06.819+0000] {processor.py:161} INFO - Started process (PID=2832) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:47:06.820+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:47:06.821+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:47:06.821+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:47:07.695+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:47:07.721+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:47:07.720+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:47:07.738+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:47:07.738+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:47:07.759+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.945 seconds
+[2026-04-17T03:47:38.051+0000] {processor.py:161} INFO - Started process (PID=2840) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:47:38.052+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:47:38.053+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:47:38.053+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:47:38.699+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:47:38.722+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:47:38.722+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:47:38.742+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:47:38.742+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:47:38.767+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.721 seconds
+[2026-04-17T03:48:09.179+0000] {processor.py:161} INFO - Started process (PID=2848) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:48:09.180+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:48:09.181+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:48:09.181+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:48:10.037+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:48:10.061+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:48:10.061+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:48:10.080+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:48:10.079+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:48:10.099+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.928 seconds
+[2026-04-17T03:48:40.623+0000] {processor.py:161} INFO - Started process (PID=2856) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:48:40.624+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:48:40.625+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:48:40.625+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:48:40.452+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:48:40.479+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:48:40.479+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:48:40.496+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:48:40.496+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:48:40.517+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 1.013 seconds
+[2026-04-17T03:49:11.386+0000] {processor.py:161} INFO - Started process (PID=2864) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:49:11.387+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:49:11.388+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:49:11.388+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:49:11.945+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:49:11.969+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:49:11.968+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:49:11.986+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:49:11.986+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:49:12.007+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.627 seconds
+[2026-04-17T03:49:42.523+0000] {processor.py:161} INFO - Started process (PID=2872) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:49:42.525+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:49:42.526+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:49:42.526+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:49:43.321+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:49:43.346+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:49:43.346+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:49:43.364+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:49:43.364+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:49:43.381+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.866 seconds
+[2026-04-17T03:50:13.842+0000] {processor.py:161} INFO - Started process (PID=2880) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:50:13.843+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:50:13.845+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:50:13.844+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:50:14.419+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:50:14.440+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:50:14.440+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:50:14.457+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:50:14.457+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:50:14.479+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.643 seconds
+[2026-04-17T03:50:45.115+0000] {processor.py:161} INFO - Started process (PID=2888) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:50:45.116+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:50:45.117+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:50:45.117+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:50:45.872+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:50:45.898+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:50:45.897+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:50:45.915+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:50:45.915+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:50:45.934+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.824 seconds
+[2026-04-17T03:51:16.425+0000] {processor.py:161} INFO - Started process (PID=2896) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:51:16.426+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:51:16.427+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:51:16.427+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:51:16.996+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:51:17.017+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:51:17.017+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:51:17.035+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:51:17.035+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:51:17.054+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.633 seconds
+[2026-04-17T03:51:47.744+0000] {processor.py:161} INFO - Started process (PID=2904) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:51:47.746+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:51:47.747+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:51:47.746+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:51:48.591+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:51:48.615+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:51:48.615+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:51:48.631+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:51:48.631+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:51:48.649+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.912 seconds
+[2026-04-17T03:52:19.268+0000] {processor.py:161} INFO - Started process (PID=2912) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:52:19.270+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:52:19.271+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:52:19.271+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:52:19.797+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:52:19.817+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:52:19.817+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:52:19.835+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:52:19.834+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:52:19.855+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.591 seconds
+[2026-04-17T03:52:50.201+0000] {processor.py:161} INFO - Started process (PID=2920) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:52:50.202+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:52:50.203+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:52:50.203+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:52:51.022+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:52:51.048+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:52:51.048+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:52:51.066+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:52:51.066+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:52:51.092+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.898 seconds
+[2026-04-17T03:53:21.527+0000] {processor.py:161} INFO - Started process (PID=2928) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:53:21.528+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:53:21.529+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:53:21.529+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:53:22.181+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:53:22.204+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:53:22.204+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:53:22.222+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:53:22.222+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:53:22.243+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.721 seconds
+[2026-04-17T03:53:52.615+0000] {processor.py:161} INFO - Started process (PID=2936) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:53:52.617+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:53:52.618+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:53:52.618+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:53:53.510+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:53:53.536+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:53:53.536+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:53:53.556+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:53:53.556+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:53:53.578+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.971 seconds
+[2026-04-17T03:54:23.931+0000] {processor.py:161} INFO - Started process (PID=2944) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:54:23.932+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:54:23.933+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:54:23.932+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:54:24.538+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:54:24.559+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:54:24.559+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:54:24.577+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:54:24.577+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:54:24.601+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.675 seconds
+[2026-04-17T03:54:55.040+0000] {processor.py:161} INFO - Started process (PID=2952) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:54:55.041+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:54:55.043+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:54:55.042+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:54:55.815+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:54:55.842+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:54:55.842+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:54:55.859+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:54:55.858+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:54:55.877+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.845 seconds
+[2026-04-17T03:55:26.253+0000] {processor.py:161} INFO - Started process (PID=2960) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:55:26.254+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:55:26.255+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:55:26.255+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:55:26.800+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:55:26.821+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:55:26.820+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:55:26.839+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:55:26.838+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:55:26.858+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.610 seconds
+[2026-04-17T03:55:57.243+0000] {processor.py:161} INFO - Started process (PID=2968) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:55:57.244+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:55:57.245+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:55:57.245+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:55:58.075+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:55:58.102+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:55:58.102+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:55:58.120+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:55:58.120+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:55:58.138+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.902 seconds
+[2026-04-17T03:56:28.510+0000] {processor.py:161} INFO - Started process (PID=2976) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:56:28.511+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:56:28.512+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:56:28.512+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:56:29.053+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:56:29.075+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:56:29.075+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:56:29.095+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:56:29.095+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:56:29.114+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.608 seconds
+[2026-04-17T03:56:59.479+0000] {processor.py:161} INFO - Started process (PID=2984) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:56:59.480+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:56:59.482+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:56:59.481+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:57:00.328+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:57:00.354+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:57:00.354+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:57:00.372+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:57:00.372+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:57:00.393+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.923 seconds
+[2026-04-17T03:57:30.776+0000] {processor.py:161} INFO - Started process (PID=2992) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:57:30.777+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:57:30.778+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:57:30.778+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:57:31.346+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:57:31.369+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:57:31.369+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:57:31.385+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:57:31.385+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:57:31.411+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.642 seconds
+[2026-04-17T03:58:01.732+0000] {processor.py:161} INFO - Started process (PID=3000) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:58:01.734+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:58:01.735+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:58:01.735+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:58:02.324+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:58:02.345+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:58:02.345+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:58:02.363+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:58:02.363+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:58:02.401+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.674 seconds
+[2026-04-17T03:58:32.829+0000] {processor.py:161} INFO - Started process (PID=3008) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:58:32.831+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:58:32.832+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:58:32.831+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:58:33.438+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:58:33.460+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:58:33.460+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:58:33.481+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:58:33.480+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:58:33.505+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.681 seconds
+[2026-04-17T03:59:03.830+0000] {processor.py:161} INFO - Started process (PID=3016) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:59:03.831+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:59:03.832+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:59:03.832+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:59:04.620+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:59:04.654+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:59:04.653+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:59:04.671+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:59:04.670+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:59:04.691+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.866 seconds
+[2026-04-17T03:59:35.012+0000] {processor.py:161} INFO - Started process (PID=3024) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:59:35.013+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T03:59:35.014+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:59:35.014+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:59:35.539+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T03:59:35.561+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:59:35.561+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T03:59:35.577+0000] {logging_mixin.py:188} INFO - [2026-04-17T03:59:35.577+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T03:59:35.603+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.597 seconds
+[2026-04-17T04:00:06.127+0000] {processor.py:161} INFO - Started process (PID=3032) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T04:00:06.128+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T04:00:06.129+0000] {logging_mixin.py:188} INFO - [2026-04-17T04:00:06.129+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T04:00:07.030+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T04:00:07.058+0000] {logging_mixin.py:188} INFO - [2026-04-17T04:00:07.058+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T04:00:07.079+0000] {logging_mixin.py:188} INFO - [2026-04-17T04:00:07.078+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T04:00:07.098+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.977 seconds
+[2026-04-17T04:00:37.641+0000] {processor.py:161} INFO - Started process (PID=3040) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T04:00:37.643+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T04:00:37.644+0000] {logging_mixin.py:188} INFO - [2026-04-17T04:00:37.644+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T04:00:38.203+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T04:00:38.224+0000] {logging_mixin.py:188} INFO - [2026-04-17T04:00:38.224+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T04:00:38.241+0000] {logging_mixin.py:188} INFO - [2026-04-17T04:00:38.240+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T04:00:38.265+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.630 seconds
+[2026-04-17T04:01:08.758+0000] {processor.py:161} INFO - Started process (PID=3048) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T04:01:08.760+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T04:01:08.761+0000] {logging_mixin.py:188} INFO - [2026-04-17T04:01:08.761+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T04:01:09.629+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T04:01:09.651+0000] {logging_mixin.py:188} INFO - [2026-04-17T04:01:09.651+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T04:01:09.672+0000] {logging_mixin.py:188} INFO - [2026-04-17T04:01:09.672+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T04:01:09.693+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.944 seconds
+[2026-04-17T04:01:40.134+0000] {processor.py:161} INFO - Started process (PID=3056) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T04:01:40.136+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T04:01:40.137+0000] {logging_mixin.py:188} INFO - [2026-04-17T04:01:40.136+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T04:01:41.050+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T04:01:41.079+0000] {logging_mixin.py:188} INFO - [2026-04-17T04:01:41.078+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T04:01:41.099+0000] {logging_mixin.py:188} INFO - [2026-04-17T04:01:41.099+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T04:01:41.122+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.994 seconds
+[2026-04-17T04:02:11.867+0000] {processor.py:161} INFO - Started process (PID=3064) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T04:02:11.868+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T04:02:11.870+0000] {logging_mixin.py:188} INFO - [2026-04-17T04:02:11.869+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T04:02:12.446+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T04:02:12.468+0000] {logging_mixin.py:188} INFO - [2026-04-17T04:02:12.468+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T04:02:12.486+0000] {logging_mixin.py:188} INFO - [2026-04-17T04:02:12.486+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T04:02:12.510+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.648 seconds
+[2026-04-17T04:02:43.049+0000] {processor.py:161} INFO - Started process (PID=3072) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T04:02:43.050+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T04:02:43.051+0000] {logging_mixin.py:188} INFO - [2026-04-17T04:02:43.051+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T04:02:43.968+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T04:02:44.000+0000] {logging_mixin.py:188} INFO - [2026-04-17T04:02:43.999+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T04:02:44.019+0000] {logging_mixin.py:188} INFO - [2026-04-17T04:02:44.019+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T04:02:44.037+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.996 seconds
+[2026-04-17T04:03:14.611+0000] {processor.py:161} INFO - Started process (PID=3080) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T04:03:14.612+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T04:03:14.613+0000] {logging_mixin.py:188} INFO - [2026-04-17T04:03:14.612+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T04:03:15.124+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T04:03:15.142+0000] {logging_mixin.py:188} INFO - [2026-04-17T04:03:15.142+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T04:03:15.157+0000] {logging_mixin.py:188} INFO - [2026-04-17T04:03:15.157+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T04:03:15.178+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.571 seconds
+[2026-04-17T04:03:45.670+0000] {processor.py:161} INFO - Started process (PID=3088) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T04:03:45.671+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T04:03:45.672+0000] {logging_mixin.py:188} INFO - [2026-04-17T04:03:45.672+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T04:03:46.453+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T04:03:46.478+0000] {logging_mixin.py:188} INFO - [2026-04-17T04:03:46.478+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T04:03:46.494+0000] {logging_mixin.py:188} INFO - [2026-04-17T04:03:46.494+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T04:03:46.514+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.849 seconds
+[2026-04-17T04:04:16.871+0000] {processor.py:161} INFO - Started process (PID=3096) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T04:04:16.873+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T04:04:16.874+0000] {logging_mixin.py:188} INFO - [2026-04-17T04:04:16.874+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T04:04:17.403+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T04:04:17.423+0000] {logging_mixin.py:188} INFO - [2026-04-17T04:04:17.422+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T04:04:17.441+0000] {logging_mixin.py:188} INFO - [2026-04-17T04:04:17.440+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T04:04:17.462+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.596 seconds
+[2026-04-17T04:04:47.605+0000] {processor.py:161} INFO - Started process (PID=3104) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T04:04:47.607+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T04:04:47.609+0000] {logging_mixin.py:188} INFO - [2026-04-17T04:04:47.608+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T04:04:48.389+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T04:04:48.414+0000] {logging_mixin.py:188} INFO - [2026-04-17T04:04:48.413+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T04:04:48.430+0000] {logging_mixin.py:188} INFO - [2026-04-17T04:04:48.430+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T04:04:48.445+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.845 seconds
+[2026-04-17T04:05:19.231+0000] {processor.py:161} INFO - Started process (PID=3112) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T04:05:19.232+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T04:05:19.233+0000] {logging_mixin.py:188} INFO - [2026-04-17T04:05:19.232+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T04:05:19.735+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T04:05:19.756+0000] {logging_mixin.py:188} INFO - [2026-04-17T04:05:19.756+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T04:05:19.775+0000] {logging_mixin.py:188} INFO - [2026-04-17T04:05:19.775+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T04:05:19.797+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.571 seconds
+[2026-04-17T04:05:50.205+0000] {processor.py:161} INFO - Started process (PID=3120) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T04:05:50.207+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T04:05:50.208+0000] {logging_mixin.py:188} INFO - [2026-04-17T04:05:50.207+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T04:05:51.020+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T04:05:51.045+0000] {logging_mixin.py:188} INFO - [2026-04-17T04:05:51.045+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T04:05:51.062+0000] {logging_mixin.py:188} INFO - [2026-04-17T04:05:51.062+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T04:05:51.082+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.884 seconds
+[2026-04-17T04:06:21.776+0000] {processor.py:161} INFO - Started process (PID=3128) to work on /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T04:06:21.778+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/elt_pipeline.py for tasks to queue
+[2026-04-17T04:06:21.779+0000] {logging_mixin.py:188} INFO - [2026-04-17T04:06:21.778+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T04:06:22.331+0000] {processor.py:840} INFO - DAG(s) 'elt_pipeline_snowflake' retrieved from /opt/airflow/dags/elt_pipeline.py
+[2026-04-17T04:06:22.351+0000] {logging_mixin.py:188} INFO - [2026-04-17T04:06:22.351+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-17T04:06:22.369+0000] {logging_mixin.py:188} INFO - [2026-04-17T04:06:22.369+0000] {dag.py:3954} INFO - Setting next_dagrun for elt_pipeline_snowflake to 2026-04-17 00:00:00+00:00, run_after=2026-04-18 00:00:00+00:00
+[2026-04-17T04:06:22.389+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/elt_pipeline.py took 0.619 seconds
