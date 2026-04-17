@@ -9,20 +9,12 @@ jobs:
   dbt:
     runs-on: ubuntu-latest
 
-    env:
-      SNOWFLAKE_ACCOUNT: ${{ secrets.SNOWFLAKE_ACCOUNT }}
-      SNOWFLAKE_USER: ${{ secrets.SNOWFLAKE_USER }}
-      SNOWFLAKE_PASSWORD: ${{ secrets.SNOWFLAKE_PASSWORD }}
-      SNOWFLAKE_ROLE: ${{ secrets.SNOWFLAKE_ROLE }}
-      SNOWFLAKE_DATABASE: ${{ secrets.SNOWFLAKE_DATABASE }}
-      SNOWFLAKE_WAREHOUSE: ${{ secrets.SNOWFLAKE_WAREHOUSE }}
-
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: "3.10"
 
@@ -30,18 +22,34 @@ jobs:
         run: |
           pip install dbt-snowflake
 
-      - name: Debug connection
+      - name: Create profiles.yml
         run: |
-          dbt debug --profiles-dir .
+          mkdir -p ~/.dbt
 
-      - name: Install dependencies
-        run: |
-          dbt deps --profiles-dir .
+          cat > ~/.dbt/profiles.yml <<EOF
+          elt_project:
+            target: dev
+            outputs:
+              dev:
+                type: snowflake
+                account: ${SNOWFLAKE_ACCOUNT}
+                user: ${SNOWFLAKE_USER}
+                password: ${SNOWFLAKE_PASSWORD}
+                role: ${SNOWFLAKE_ROLE}
+                database: ${SNOWFLAKE_DATABASE}
+                warehouse: ${SNOWFLAKE_WAREHOUSE}
+                schema: staging
+                threads: 4
+          EOF
 
-      - name: Run dbt models
-        run: |
-          dbt run --profiles-dir .
+      - name: dbt debug
+        run: dbt debug
+        working-directory: ./elt_project
 
-      - name: Run tests
-        run: |
-          dbt test --profiles-dir .
+      - name: dbt deps
+        run: dbt deps
+        working-directory: ./elt_project
+
+      - name: dbt build
+        run: dbt build
+        working-directory: ./elt_project
